@@ -8,28 +8,36 @@ public class Exercise01 : MonoBehaviour
 
     private Vector3 spawnPosition;
 
+    // Screen limits
     private float xRange = 8f;
     private float yRange = 4f;
 
+    // Random values
     private float randomX, randomY;
 
-    private int index = 0;
+    // Number of enemies
+    private int enemiesCount = 0;
 
     private void Update()
     {
+        // Gets the number of enemies in the scene
         int enemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
 
+        // If the number of enemies is less than or equal to 0
         if (enemies <= 0)
         {
-            index++;
+            // Increases the number of enemies
+            enemiesCount++;
 
-            for (int i = 0; i <= index; i++)
+            // Spawns the current number of enemies
+            for (int i = 0; i <= enemiesCount; i++)
             {
                 SpawnEnemy();
             }
         }
     }
 
+    // Returns a random position in x and y
     public Vector3 RandomPosition()
     {
         randomX = Random.Range(-xRange, xRange);
@@ -38,6 +46,7 @@ public class Exercise01 : MonoBehaviour
         return new Vector3(randomX, randomY, 0);
     }
 
+    // Spawns an enemy in a random position
     public void SpawnEnemy()
     {
         spawnPosition = RandomPosition();

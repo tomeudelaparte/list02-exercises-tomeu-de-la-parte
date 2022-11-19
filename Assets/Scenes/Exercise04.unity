@@ -462,7 +462,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 335372390}
         m_TargetAssemblyTypeName: Exercise04, Assembly-CSharp
-        m_MethodName: CheckAnswer
+        m_MethodName: CheckSelectedOption
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1538214103}
@@ -1435,7 +1435,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 335372390}
         m_TargetAssemblyTypeName: Exercise04, Assembly-CSharp
-        m_MethodName: CheckAnswer
+        m_MethodName: CheckSelectedOption
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 111555241}
